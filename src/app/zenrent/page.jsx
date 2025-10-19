@@ -5,9 +5,9 @@ import { Heading, Subheading } from '@/components/text'
 import { Button } from '@/components/button'
 
 export const metadata = {
-  title: 'ZenRent',
+  title: 'ZenRent - Property Management Simplified',
   description:
-    'Simplified property management for modern landlords. Streamline tenant communication, maintenance, and finances.',
+    'ZenRent is a comprehensive property management platform for modern landlords. Manage rent collection, maintenance requests, tenant communication via WhatsApp, and track finances all in one place.',
 }
 
 function Hero() {

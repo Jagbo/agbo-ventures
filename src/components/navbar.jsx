@@ -14,6 +14,7 @@ import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 const links = [
   { href: '/inafrika', label: 'InAfrika' },
   { href: '/zenrent', label: 'ZenRent' },
+  { href: '/thechecklist', label: 'theChecklist' },
 ]
 
 function DesktopNav() {

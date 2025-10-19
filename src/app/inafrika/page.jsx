@@ -5,9 +5,9 @@ import { Heading, Subheading } from '@/components/text'
 import { Button } from '@/components/button'
 
 export const metadata = {
-  title: 'InAfrika',
+  title: 'InAfrika - Invest in African Opportunities',
   description:
-    'A crowdfunding platform connecting investors with exciting opportunities across Africa.',
+    'InAfrika is a crowdfunding platform connecting investors with vetted African opportunities. Invest in agriculture, transportation, property, and startups driving sustainable growth across Africa.',
 }
 
 function Hero() {

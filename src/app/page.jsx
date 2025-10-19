@@ -3,10 +3,10 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient } from '@/components/gradient'
-import { Keyboard } from '@/components/keyboard'
+import { InteractiveSwipeCard } from '@/components/interactive-swipe-card'
+import { LeaderboardDisplay } from '@/components/leaderboard-display'
 import { Link } from '@/components/link'
 import { LinkedAvatars } from '@/components/linked-avatars'
-import { LogoCloud } from '@/components/logo-cloud'
 import { LogoCluster } from '@/components/logo-cluster'
 import { LogoTimeline } from '@/components/logo-timeline'
 import { Map } from '@/components/map'
@@ -17,8 +17,9 @@ import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
 
 export const metadata = {
+  title: 'Home',
   description:
-    'AGBO Ventures builds products that fit consumer needs. From investment platforms to property management, we create solutions that solve real problems.',
+    'AGBO Ventures builds innovative products that solve real consumer problems. Discover InAfrika, ZenRent, theChecklist, and ChallengeCircle - solutions designed for modern African consumers.',
 }
 
 function Hero() {
@@ -46,8 +47,8 @@ function Hero() {
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
             <Button href="#portfolio">View Our Products</Button>
-            <Button variant="secondary" href="/company">
-              About Us
+            <Button variant="secondary" href="/get-in-touch">
+              Get in touch
             </Button>
           </div>
         </div>
@@ -61,7 +62,7 @@ function BentoSection() {
     <Container>
       <Subheading id="portfolio">Our Products</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Four brands, one mission: solving consumer problems.
+        One mission: solving consumer problems.
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
@@ -90,8 +91,10 @@ function BentoSection() {
           title="theChecklist"
           description="Discover London together. A mobile app helping you find things to do and create curated lists with friends and loved ones."
           graphic={
-            <div className="flex size-full pt-10 pl-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+              <div className="w-full max-w-[280px] scale-75 origin-center">
+                <InteractiveSwipeCard />
+              </div>
             </div>
           }
           className="lg:col-span-2 lg:rounded-bl-4xl"
@@ -100,7 +103,13 @@ function BentoSection() {
           eyebrow="Fitness"
           title="ChallengeCircle"
           description="Fitness meets competition. Set gym challenges with friends, stay motivated, and win money based on your performance."
-          graphic={<LogoCluster />}
+          graphic={
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+              <div className="w-full max-w-[280px] scale-75 origin-center">
+                <LeaderboardDisplay />
+              </div>
+            </div>
+          }
           className="lg:col-span-2"
         />
         <BentoCard
@@ -120,9 +129,6 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <Container className="mt-10">
-          <LogoCloud />
-        </Container>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
           <BentoSection />
         </div>
